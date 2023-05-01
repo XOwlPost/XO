@@ -1,0 +1,36 @@
+{
+  "name": "Génésis∞Hásh",
+  "description": "A unique NFT representing the Genesis Resurgence Collection",
+  "image": "https://ipfs.io/ipfs/QmYRtZEWxUZdQ8WgjK7vQck6yBMB6VhU6NWsU6wBx6ZwpT/GenesisHash.png",
+  "external_url": "https://example.com/genesis-hash",
+  "attributes": [
+    {
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    },
+    {
+      "trait_type": "Theme",
+      "value": "Space Exploration"
+    },
+    {
+      "trait_type": "Symbolism",
+      "value": "Infinity, Resurgence, and Pioneering Spirit"
+    },
+    {
+      "trait_type": "Mission",
+      "value": "12th Midjourney to Mars"
+    },
+    {
+      "trait_type": "Game",
+      "value": "To be developed by the community"
+    },
+    {
+      "trait_type": "Link",
+      "value": "https://bitcointalk.org/index.php?topic=999999.0"
+    },
+    {
+      "trait_type": "Hash",
+      "value": "2623d909656d691588d1984e666e90795baffa0d5277aa654c86715fce21888b"
+    }
+  ]
+}
