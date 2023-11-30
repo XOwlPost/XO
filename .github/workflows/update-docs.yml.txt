@@ -1,0 +1,29 @@
+name: Update Documentation
+
+on:
+  push:
+    branches:
+      - main
+  # Optionally, schedule updates
+  # schedule:
+  #   - cron: '0 0 * * *'  # Runs every day at midnight
+
+jobs:
+  update-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Generate Documentation
+      run: |
+        # Add commands to generate/update documentation
+        # Example: mkdocs build, sphinx-build, etc.
+
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.name 'Your Name'
+        git config --global user.email 'your-email@example.com'
+        git add ./docs
+        git commit -m "Update documentation"
+        git push
