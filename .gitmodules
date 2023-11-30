@@ -1,0 +1,9 @@
+[submodule "TicTacToe"]
+	path = TicTacToe
+	url = https://github.com/XOwlPost/XOwlPost-TicTacToe
+[submodule "XO-Lottery"]
+	path = XO-Lottery
+	url = https://github.com/XOwlPost/XO-Lottery
+[submodule "LikesTokenV2"]
+	path = LikesTokenV2
+	url = https://github.com/XOwlPost/LikesTokenV2
