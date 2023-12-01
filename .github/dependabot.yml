@@ -1,0 +1,14 @@
+version: 2
+updates:
+  # Enable version updates for npm (JavaScript)
+  - package-ecosystem: "npm"
+    directory: "/" # Location of package.json and package-lock.json/yarn.lock
+    schedule:
+      interval: "weekly" # Dependabot will check for updates weekly
+
+  # If you have other ecosystems, you can add them here
+  # For example, for Python with pip, uncomment the following:
+  # - package-ecosystem: "pip"
+  #   directory: "/" # Location of requirements.txt or setup.py
+  #   schedule:
+  #     interval: "weekly"
