@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>member-guide.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Base16 Atelier Lakeside Light - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/lakeside) */
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+
+/* Atelier-Lakeside Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #5a7b8c;
+}
+
+/* Atelier-Lakeside Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-name,
+.hljs-regexp,
+.hljs-link,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #d22d72;
+}
+
+/* Atelier-Lakeside Orange */
+.hljs-number,
+.hljs-meta,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params {
+  color: #935c25;
+}
+
+/* Atelier-Lakeside Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet {
+  color: #568c3b;
+}
+
+/* Atelier-Lakeside Blue */
+.hljs-title,
+.hljs-section {
+  color: #257fad;
+}
+
+/* Atelier-Lakeside Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #6b6bb8;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #ebf8ff;
+  color: #516d7b;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<p>Here's the outline for the Member Guide, focusing on rules, tips, and best practices for XO Dev Den:</p>
+<ol>
+<li>
+<p><strong>Welcome to XO Dev Den</strong></p>
+<ul>
+<li>Brief introduction to the server and its purpose.</li>
+</ul>
+</li>
+<li>
+<p><strong>Community Rules</strong></p>
+<ul>
+<li>Clear, concise rules covering respect, communication, and behavior.</li>
+<li>Guidelines on posting content and interaction in different channels.</li>
+</ul>
+</li>
+<li>
+<p><strong>Getting Started</strong></p>
+<ul>
+<li>How to navigate the server, understand roles, and use channels effectively.</li>
+</ul>
+</li>
+<li>
+<p><strong>Engagement Tips</strong></p>
+<ul>
+<li>Best practices for engaging in discussions, sharing content, and networking.</li>
+</ul>
+</li>
+<li>
+<p><strong>Safety and Privacy</strong></p>
+<ul>
+<li>Importance of maintaining personal and others' privacy.</li>
+</ul>
+</li>
+<li>
+<p><strong>Support and Help</strong></p>
+<ul>
+<li>Where to find help and how to report issues.</li>
+</ul>
+</li>
+<li>
+<p><strong>Community Spirit</strong></p>
+<ul>
+<li>Encouragement to participate, collaborate, and contribute.</li>
+</ul>
+</li>
+<li>
+<p><strong>Conclusion and Invitation</strong></p>
+<ul>
+<li>Encouraging active participation and continuous learning.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>This outline for the Member Guide is comprehensive and covers all essential aspects of being an effective member of XO Dev Den. Each section is designed to guide members through the server's workings and expectations, ensuring a positive and productive community experience. This guide will help new and existing members understand how to best contribute and engage within the server, promoting a harmonious and collaborative environment.</p>
+<p><strong>1. Welcome to XO Dev Den</strong><br>
+Welcome to XO Dev Den, a thriving community where tech enthusiasts and crypto advocates unite. Our server is dedicated to exploring the ever-evolving world of technology and blockchain, offering a platform for learning, sharing, and growth.</p>
+<p><strong>2. Community Rules</strong><br>
+Our community thrives on respect, open communication, and positive behavior. We have clear rules to ensure a constructive environment:</p>
+<ul>
+<li>Treat each other with respect and courtesy.</li>
+<li>Communicate clearly and responsibly.</li>
+<li>Post content that's relevant and appropriate for each channel.<br>
+Follow these guidelines to help maintain a welcoming and engaging space for all.</li>
+</ul>
+<p><strong>3. Getting Started</strong><br>
+Welcome aboard! Here's how to get the most out of XO Dev Den:</p>
+<ul>
+<li>Explore various channels, each with a unique focus.</li>
+<li>Understand different roles and what they represent.</li>
+<li>Engage in channels that match your interests and expertise.</li>
+</ul>
+<p><strong>4. Engagement Tips</strong><br>
+Maximize your presence in the community:</p>
+<ul>
+<li>Join discussions with openness and curiosity.</li>
+<li>Share your knowledge and insights generously.</li>
+<li>Network with other members to build connections and collaborations.</li>
+</ul>
+<p><strong>5. Safety and Privacy</strong><br>
+Your safety and privacy are paramount:</p>
+<ul>
+<li>Be cautious about sharing personal information.</li>
+<li>Respect the privacy of others in the server.</li>
+<li>Report any concerns about privacy breaches to moderators.</li>
+</ul>
+<p><strong>6. Support and Help</strong><br>
+Need assistance? Here's how to get help:</p>
+<ul>
+<li>For general inquiries or assistance, visit the #help channel.</li>
+<li>To report issues or concerns, contact a moderator directly.</li>
+<li>Check #guides-guidelines for FAQs and server information.</li>
+</ul>
+<p><strong>7. Community Spirit</strong><br>
+Embrace the spirit of XO Dev Den:</p>
+<ul>
+<li>Actively participate in discussions and events.</li>
+<li>Collaborate on projects and share ideas.</li>
+<li>Contribute to a positive and inclusive atmosphere.</li>
+</ul>
+<p><strong>8. Conclusion and Invitation</strong><br>
+Join us in this journey of discovery and innovation:</p>
+<ul>
+<li>Engage with the community to enrich your experience.</li>
+<li>Embrace continuous learning and personal growth.</li>
+<li>Together, let's build a vibrant and forward-thinking community. 🚀🌟</li>
+</ul>
+
+</body>
+</html>
