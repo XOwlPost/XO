@@ -7,3 +7,6 @@
 [submodule "LikesTokenV2"]
 	path = LikesTokenV2
 	url = https://github.com/XOwlPost/LikesTokenV2
+[submodule "21XO-Joomla"]
+	path = 21XO-Joomla
+	url = https://github.com/XOwlPost/21XO-Joomla.git

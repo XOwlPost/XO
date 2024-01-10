@@ -1,41 +1,6 @@
-# Security Policy
+Security Policies and Procedures, please follow the steps to create a SECURITY.md and crafting the content 
 
-## Supported Versions
-
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
-
-| Version | Supported          |
-| ------- | ------------------ |
-| 1.2.x   | :white_check_mark: |
-| 1.1.x   | :x:                |
-| 1.0.x   | :white_check_mark: |
-| < 1.0   | :x:                |
-
-## Reporting a Vulnerability
-
-Use this section to tell people how to report a vulnerability.
-
-Tell them where to go, how to report a vulnerability, and what to expect after they’ve submitted the vulnerability report.
-
-- Please report vulnerabilities by sending an email to xofidelius@proton.me
-- Include the steps to reproduce the vulnerability and any other relevant information.
-- Expect a response within a certain timeframe (e.g., 48 hours).
-
-## Disclosure Policy
-
-Let people know what to expect when they report a vulnerability: acknowledgment of the report, timeframes for a response, and how the report will be handled.
-
-## Known Vulnerabilities
-
-Optionally, include a list of known vulnerabilities, their impacts, and any mitigations or fixes.
-
-| Vulnerability | Affected Versions | Mitigation    |
-| ------------- | ----------------- | ------------- |
-| Example CVE   | 1.0.x             | Upgrade to 1.2|
-
-
-Creating a `SECURITY.md` file for your project is a great practice. This file is typically used to inform users about the security policies and procedures for your project, and it can include guidelines on how to report security vulnerabilities responsibly. Here's a guide on how to create a `SECURITY.md` file and what to include in it:
+---
 
 ### Steps to Create a SECURITY.md File
 
@@ -43,62 +8,52 @@ Creating a `SECURITY.md` file for your project is a great practice. This file is
    - In the root directory of your project, create a file named `SECURITY.md`.
 
 2. **Define Security Policies and Procedures**:
-   - Clearly state the project's security policies, procedures, and any relevant information. This typically includes:
+   - The file should clearly articulate your project's security policies and procedures. This includes:
 
-     - **Supported Versions**: List which versions of your project are currently being supported with security updates.
-
-     - **Vulnerability Reporting**: Provide clear instructions on how to report a security vulnerability. This often includes a preferred method of contact (like an email address).
-
-     - **Disclosure Policy**: Explain how you will handle the vulnerability report, including acknowledgment of the report, how the report will be evaluated, and timelines for a response.
-
-     - **Comments on Known Vulnerabilities**: Optionally, you can include information about any known vulnerabilities and their statuses.
+     - **Supported Versions**: Clearly list the versions of your project that are currently supported with security updates.
+     - **Vulnerability Reporting**: Offer detailed instructions for reporting security vulnerabilities, including preferred contact methods (such as an email address).
+     - **Disclosure Policy**: Describe how you will handle vulnerability reports, including acknowledgment of the report, the evaluation process, and timelines for responses.
 
 3. **Write the Content**:
-   - Write down the information in a clear and concise manner. Here’s a basic template to get you started:
+   - Draft the information in a clear and concise format. Here is a tailored template for your `SECURITY.md`:
 
      ```markdown
-     # Security Policy
+     # Security Policy for the XO Project
 
      ## Supported Versions
 
-     Use this section to tell people about which versions of your project are
-     currently being supported with security updates.
+     This section informs users about which versions of the XO project are currently receiving security updates.
 
      | Version | Supported          |
      | ------- | ------------------ |
-     | 1.2.x   | :white_check_mark: |
-     | 1.1.x   | :x:                |
-     | 1.0.x   | :white_check_mark: |
+     | 2.x.x   | :white_check_mark: |
+     | 1.x.x   | :x:                |
      | < 1.0   | :x:                |
 
      ## Reporting a Vulnerability
 
-     Use this section to tell people how to report a vulnerability.
+     If you discover a security vulnerability in the XO project, please report it by following these steps:
 
-     Tell them where to go, how to report a vulnerability, and what to expect after they’ve submitted the vulnerability report.
-
-     - Please report vulnerabilities by sending an email to [security@example.com].
-     - Include the steps to reproduce the vulnerability and any other relevant information.
-     - Expect a response within a certain timeframe (e.g., 48 hours).
+     - Email the vulnerability details to [security@xo.com].
+     - Provide a thorough description of the issue, including steps to reproduce it, and any other pertinent information.
+     - Expect an acknowledgment of your report within 48 hours of submission.
 
      ## Disclosure Policy
 
-     Let people know what to expect when they report a vulnerability: acknowledgment of the report, timeframes for a response, and how the report will be handled.
+     When a vulnerability is reported:
 
-     ## Known Vulnerabilities
-
-     Optionally, include a list of known vulnerabilities, their impacts, and any mitigations or fixes.
-
-     | Vulnerability | Affected Versions | Mitigation    |
-     | ------------- | ----------------- | ------------- |
-     | Example CVE   | 1.0.x             | Upgrade to 1.2|
+     - We will confirm receipt of your report.
+     - Our team will assess the vulnerability and aim to communicate a timeframe for a resolution within 72 hours.
+     - All reports are treated with confidentiality, and we are committed to resolving security issues promptly and thoroughly.
      ```
 
 4. **Commit and Push**:
    - After creating and reviewing your `SECURITY.md`, commit it to your repository and push the changes.
-   - This ensures that the security policy is publicly accessible and can be easily found by users or contributors.
+   - This makes the security policy publicly accessible and easily found by users or contributors.
 
 5. **Regular Updates**:
-   - Keep your `SECURITY.md` file updated, especially when new versions are released or if the security procedures change.
+   - Keep the `SECURITY.md` file up to date, particularly when new versions are released or if there are changes in security procedures.
 
-By adding a `SECURITY.md` file to your repository, you not only make your project more professional but also help build trust with your users by being transparent about how security issues are handled.
+---
+
+This structure ensures that your `SECURITY.md` file is comprehensive and clearly communicates how security issues are handled in your project, thereby building trust with users and contributors.
