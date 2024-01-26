@@ -10,3 +10,7 @@
 [submodule "21XO-Joomla"]
 	path = 21XO-Joomla
 	url = https://github.com/XOwlPost/21XO-Joomla.git
+[submodule "21XO-LMS"]
+	path = 21XO-LMS
+	url = https://github.com/XOwlPost/learning-management-system.git
+
