@@ -1,0 +1,12 @@
+{
+  "name": "xo-root",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/XOwlPost/XO",
+  "author": "XOwlPost - Resurgence Advocate <xofidelius@proton.me>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "TicTacToe/my-angular-app"
+  ]
+}

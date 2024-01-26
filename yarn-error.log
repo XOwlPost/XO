@@ -1,0 +1,43 @@
+Arguments: 
+  C:\ProgramData\nvm\v20.9.0\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js workspace TicTacToe/my-angular-app add underscore@1.12.1
+
+PATH: 
+  C:\tools\Anaconda3\Scripts;C:\tools\Anaconda3;C:\Users\coale\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\coale\bin;C:\tools\Anaconda3\envs\LikesTokenEnv;C:\tools\Anaconda3\envs\LikesTokenEnv\Library\mingw-w64\bin;C:\tools\Anaconda3\envs\LikesTokenEnv\Library\usr\bin;C:\tools\Anaconda3\envs\LikesTokenEnv\Library\bin;C:\tools\Anaconda3\envs\LikesTokenEnv\Scripts;C:\tools\Anaconda3\envs\LikesTokenEnv\bin;C:\tools\Anaconda3\condabin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\coale\bin;C:\Users\coale\AppData\Local\cloud-code\installer\google-cloud-sdk\bin;C:\Python312\Scripts;C:\Python312;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\GnuPG\bin;C:\Program Files\Docker\Docker\resources\bin;%NVM_HOME%;%NVM_SYMLINK%;C:\Program Files (x86)\Yarn\bin;C:\Program Files\Git\cmd;C:\Users\coale\AppData\Local\Microsoft\WindowsApps;C:\Users\coale\AppData\Local\Programs\Microsoft VS Code Insiders\bin;C:\ProgramData\nvm;C:\Program Files\nodejs;C:\Users\coale\AppData\Local\Yarn\bin;C:\Users\coale\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files\Google\Cloud SDK\google-cloud-sdk\bin;C:\Python312\Scripts;C:\Python312;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\GnuPG\bin;C:\Program Files\Docker\Docker\resources\bin;%NVM_HOME%;%NVM_SYMLINK%;C:\Program Files (x86)\Yarn\bin;C:\Program Files\Git\cmd;C:\Users\coale\AppData\Local\Microsoft\WindowsApps;C:\Users\coale\AppData\Local\Programs\Microsoft VS Code Insiders\bin;C:\ProgramData\nvm;C:\Program Files\nodejs;C:\Users\coale\AppData\Local\Yarn\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.9.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: D:\XO-repo\XO\package.json: Expected ',' or ']' after array element in JSON at position 278
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:310:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "xo-root",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/XOwlPost/XO",
+    "author": "XOwlPost - Resurgence Advocate <xofidelius@proton.me>",
+    "license": "MIT",
+    "private": true,
+    "workspaces": [
+      "TicTacToe/my-angular-app"
+      // You can add more workspaces here as they become ready
+    ],
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

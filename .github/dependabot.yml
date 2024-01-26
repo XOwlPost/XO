@@ -1,14 +1,12 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
 version: 2
 updates:
-  # Enable version updates for npm (JavaScript)
-  - package-ecosystem: "npm"
-    directory: "/" # Location of package.json and package-lock.json/yarn.lock
+  - package-ecosystem: "" # See documentation for possible values
+    directory: "/" # Location of package manifests
     schedule:
-      interval: "weekly" # Dependabot will check for updates weekly
-
-  # If you have other ecosystems, you can add them here
-  # For example, for Python with pip, uncomment the following:
-  # - package-ecosystem: "pip"
-  #   directory: "/" # Location of requirements.txt or setup.py
-  #   schedule:
-  #     interval: "weekly"
+      interval: "daily" # Dependabot will check for updates daily
+      
