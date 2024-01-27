@@ -12,4 +12,4 @@
 	url = https://github.com/XOwlPost/21XO-Joomla
 [submodule "21XO-LMS"]
 	path = 21XO-LMS
-	url = https://github.com/XOwlPost/learning-management-system
+  url = https://github.com/XOwlPost/learning-management-system
